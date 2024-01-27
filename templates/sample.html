@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="static/css/sample.css">
+</head>
+<body>
+    <h1 class="hello">こんにちは、開催場とレース番号を選んでください</h1>
+    <form action="getPlaceAndNum" method="post">
+    <select name="selected_value">
+        {% for place in places %}
+          <option>{{ place }}</option>
+        {% endfor %}
+     
+    </select>
+    <select name="selected_value2">
+        {% for num in numbers %}
+            <option>{{ num }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
